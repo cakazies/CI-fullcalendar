@@ -1,0 +1,182 @@
+/* ==========================
+   MENU FULLPAGE CSS
+========================== */
+
+.panel {
+    position: fixed;
+    left: -100%;
+    /*left or right and the width of your navigation panel*/
+    width: 100%;
+    /*should match the above value*/
+}
+
+.menu-link i {
+    text-decoration: none;
+    font-size: 40px;
+    color: #fff;
+}
+
+#menu {
+    background: rgba(33, 33, 33, 0.6);
+    z-index: 998;
+}
+
+#menu ul {
+    margin-top: 150px;
+}
+
+#menu li {
+    text-align: center;
+    transition: all 0.4s ease;
+    padding: 20px 0;
+}
+
+#menu li a {
+    color: #fff;
+    font-size: 23px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#menu li a.active {
+    color: #80b7b2;
+}
+
+#menu li a:hover {
+    color: #80b7b2;
+}
+
+.menu-link {
+    z-index: 999;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    font-size: 0;
+    text-indent: -9999px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+    background-color: transparent;
+}
+
+.menu-link:focus {
+    outline: none;
+}
+
+.menu-link span {
+    display: block;
+    position: absolute;
+    top: 45px;
+    left: 18px;
+    right: 18px;
+    height: 5px;
+    border-radius: 2px;
+    background: #80b7b2;
+    -webkit-transition: background 0 0.3s;
+    transition: background 0 0.3s;
+}
+
+.menu-link span::before,
+.menu-link span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 2px;
+    background-color:#80b7b2;
+    content: "";
+    -webkit-transition-duration: 0.3s, 0.3s;
+    transition-duration: 0.3s, 0.3s;
+    -webkit-transition-delay: 0.3s, 0;
+    transition-delay: 0.3s, 0;
+}
+
+.menu-link span::before {
+    top: -15px;
+    -webkit-transition-property: top, -webkit-transform;
+    transition-property: top, transform;
+}
+
+.menu-link span::after {
+    bottom: -15px;
+    -webkit-transition-property: bottom, -webkit-transform;
+    transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+
+.menu-open {
+    background-color: transparent;
+}
+
+.menu-open span {
+    background: none;
+}
+
+.menu-open span::before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.menu-open span::after {
+    bottom: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.menu-open span::before,
+.menu-open span::after {
+    -webkit-transition-delay: 0, 0.3s;
+    transition-delay: 0, 0.3s;
+}
+
+@media screen and (max-width: 1440px) {
+    #menu ul {
+        margin: 50px 0;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    #menu li {
+        padding: 20px 0 0;
+    }
+    #menu ul {
+        margin: 90px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #menu li a {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    #menu li a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    .menu-link {
+        top: -15px;
+    }
+}
