@@ -51,7 +51,7 @@ $active_record = TRUE;
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';
-$db['default']['database'] = 'eko';
+$db['default']['database'] = 'ci-fullcalendar';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
@@ -64,41 +64,6 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
-
-// koneksi Simpeg
-$db['simpeg']['hostname'] = '10.101.10.246';
-$db['simpeg']['username'] = 'root';
-$db['simpeg']['password'] = 'mrpresident';
-$db['simpeg']['database'] = 'simpeg_0511';
-$db['simpeg']['dbdriver'] = 'mysqli';
-$db['simpeg']['dbprefix'] = '';
-$db['simpeg']['pconnect'] = TRUE;
-$db['simpeg']['db_debug'] = TRUE;
-$db['simpeg']['cache_on'] = FALSE;
-$db['simpeg']['cachedir'] = '';
-$db['simpeg']['char_set'] = 'utf8';
-$db['simpeg']['dbcollat'] = 'utf8_general_ci';
-$db['simpeg']['swap_pre'] = '';
-$db['simpeg']['autoinit'] = TRUE;
-$db['simpeg']['stricton'] = FALSE;
-
-
-// koneksi Siakad
-$db['siakad']['hostname'] = '180.250.165.150';
-$db['siakad']['username'] = 'iain';
-$db['siakad']['password'] = 'ampelakademik!3';
-$db['siakad']['database'] = 'iainmigrasi';
-$db['siakad']['dbdriver'] = 'postgre';
-$db['siakad']['dbprefix'] = '';
-$db['siakad']['pconnect'] = TRUE;
-$db['siakad']['db_debug'] = TRUE;
-$db['siakad']['cache_on'] = FALSE;
-$db['siakad']['cachedir'] = '';
-$db['siakad']['char_set'] = 'utf8';
-$db['siakad']['dbcollat'] = 'utf8_general_ci';
-$db['siakad']['swap_pre'] = '';
-$db['siakad']['autoinit'] = TRUE;
-$db['siakad']['stricton'] = FALSE;
 
 
 /* End of file database.php */

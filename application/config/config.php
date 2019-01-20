@@ -22,7 +22,8 @@
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/eko/';
+$config['base_url'] = 'http://eko.test:8080/';
+// $config['base_url'] = 'http://localhost/eko/';
 // Base url , set url base untuk mengambil folder, css,
 //set url untuk mengatur url
 

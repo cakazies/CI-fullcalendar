@@ -12,9 +12,9 @@ MySQL - 10.1.25-MariaDB : Database - eko
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`eko` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`ci-fullcalendar` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `eko`;
+USE `ci-fullcalendar`;
 
 /*Table structure for table `detail_aset` */
 
@@ -33,7 +33,7 @@ CREATE TABLE `detail_aset` (
 
 /*Data for the table `detail_aset` */
 
-insert  into `detail_aset`(`da_id`,`da_aset`,`da_nama`,`da_ket`,`da_harga`,`da_foto`,`da_status`) values 
+insert  into `detail_aset`(`da_id`,`da_aset`,`da_nama`,`da_ket`,`da_harga`,`da_foto`,`da_status`) values
 (1,1,'Lapangan 2','ini adalah langganan mas mas ',20000,NULL,1),
 (2,1,'tenis','wkwwk',50000,NULL,1),
 (3,1,'Omah Kayu','heheh sangar mas ',200000,NULL,1),
@@ -53,19 +53,6 @@ CREATE TABLE `history_login` (
   PRIMARY KEY (`his_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
-/*Data for the table `history_login` */
-
-insert  into `history_login`(`his_id`,`his_login`,`his_ip`,`his_masuk`,`his_keluar`,`his_status`) values 
-(1,1,'','2018-12-15 06:19:00',NULL,1),
-(2,1,'','2018-12-15 06:20:00',NULL,1),
-(3,1,'','2018-12-15 06:25:00',NULL,1),
-(4,1,'','2018-12-15 06:28:00',NULL,1),
-(5,1,'','2018-12-15 12:56:00',NULL,1),
-(6,1,'','2018-12-15 10:09:00',NULL,1),
-(7,1,'','2018-12-16 02:53:00',NULL,1),
-(8,1,'','2018-12-16 05:42:00',NULL,1);
-
-/*Table structure for table `login` */
 
 DROP TABLE IF EXISTS `login`;
 
@@ -83,7 +70,7 @@ CREATE TABLE `login` (
 
 /*Data for the table `login` */
 
-insert  into `login`(`log_id`,`log_username`,`log_password`,`log_user`,`log_daftar`,`log_lastlogin`,`log_ip`,`log_status`) values 
+insert  into `login`(`log_id`,`log_username`,`log_password`,`log_user`,`log_daftar`,`log_lastlogin`,`log_ip`,`log_status`) values
 (1,'eko','28b662d883b6d76fd96e4ddc5e9ba780',1,NULL,'2018-12-16 05:42:00',NULL,1);
 
 /*Table structure for table `m_aset` */
@@ -101,14 +88,6 @@ CREATE TABLE `m_aset` (
   PRIMARY KEY (`aset_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
-/*Data for the table `m_aset` */
-
-insert  into `m_aset`(`aset_id`,`aset_nama`,`aset_alamat`,`aset_desa`,`aset_user`,`aset_jenis`,`aset_status`) values 
-(1,'Lapangan 1','jalan brawijaya mas ','Malang',1,1,1),
-(3,'nama aset','alamat aset','desa aset',1,2,2),
-(4,'lapangan tenis ','kepet','desa',1,2,1);
-
-/*Table structure for table `m_jenis` */
 
 DROP TABLE IF EXISTS `m_jenis`;
 
@@ -122,7 +101,7 @@ CREATE TABLE `m_jenis` (
 
 /*Data for the table `m_jenis` */
 
-insert  into `m_jenis`(`jns_id`,`jns_nama`,`jns_ket`,`jns_status`) values 
+insert  into `m_jenis`(`jns_id`,`jns_nama`,`jns_ket`,`jns_status`) values
 (1,'Lapangan Futsal','ini adalah fasilitas lapangan futsal',1),
 (2,'Gedung','ini fasilitas Gedung',1);
 
@@ -143,16 +122,6 @@ CREATE TABLE `transaksi` (
   PRIMARY KEY (`tran_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
-/*Data for the table `transaksi` */
-
-insert  into `transaksi`(`tran_id`,`tran_da`,`tran_hari`,`tran_jam`,`tran_pesan`,`tran_nama`,`tran_org`,`tran_hp`,`tran_status`) values 
-(1,1,'2018-12-18',12,'2018-12-19 12:09:05','Kipli','Sayur Kol','0812345678',1),
-(2,2,'2018-12-20',20,NULL,'pemesan','barcelona','08123456789',NULL),
-(3,3,'2018-12-20',15,NULL,'kept','asjhd','asdjkh',NULL),
-(4,3,'2018-12-20',17,NULL,'asfdsgd','sadsdf','sadsf',NULL),
-(5,3,'2018-12-25',9,NULL,'sapi','sapi','sapi',NULL);
-
-/*Table structure for table `user` */
 
 DROP TABLE IF EXISTS `user`;
 
@@ -170,7 +139,7 @@ CREATE TABLE `user` (
 
 /*Data for the table `user` */
 
-insert  into `user`(`user_id`,`user_nama`,`user_alamat`,`user_tlp`,`user_kec`,`user_kab`,`user_foto`,`user_status`) values 
+insert  into `user`(`user_id`,`user_nama`,`user_alamat`,`user_tlp`,`user_kec`,`user_kab`,`user_foto`,`user_status`) values
 (1,'sapiteng','malang',NULL,NULL,NULL,'default.jpg',1);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
