@@ -1,18 +1,16 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-/*
-|--------------------------------------------------------------------------
-| File and Directory Modes
-|--------------------------------------------------------------------------
-|
-| These prefs are used when checking and setting modes when working
-| with the file system.  The defaults are fine on servers with proper
-| security, but you may wish (or even need) to change the values in
-| certain environments (Apache running a separate process for each
-| user, PHP under CGI with Apache suEXEC, etc.).  Octal values should
-| always be used to set the mode correctly.
-|
-*/
+// ****************************
+// Created by cakazies
+// email : cakazies@gmail.com
+// IG : @cakazies
+// Github : https://github.com/cakazies
+// if you have some question, you can call me in this account
+// please suggestion to me in my accunt
+// thanksful for download or cloning
+// ***************************
+
+
 define('FILE_READ_MODE', 0644);
 define('FILE_WRITE_MODE', 0666);
 define('DIR_READ_MODE', 0755);
