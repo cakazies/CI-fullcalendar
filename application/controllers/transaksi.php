@@ -19,7 +19,6 @@ class Transaksi extends CI_Controller {
 		$user_id = $this->session->userdata('user_id');
 		$data['transaksi'] = $this->Admin_model->getTransaksi($user_id);
 		$data['assets'] = $this->Admin_model->getasset();
-		// print_r ($data['transaksi']);
 		$this->load->view('admin/header',$data);
 		$this->load->view('admin/transaksi',$data);
 		$this->load->view('admin/footer',$data);
@@ -41,7 +40,7 @@ class Transaksi extends CI_Controller {
 	}
 
 	public function add_transaksi(){
-		$data['tran_id'] = str_replace("'","",$this->input->post('da_id'));
+		$tran_id = str_replace("'","",$this->input->post('da_id'));
 		$data['tran_da'] = str_replace("'","",$this->input->post('tran_da'));
 		$data['tran_hari'] = str_replace("'","",$this->input->post('tran_hari'));
 		$data['tran_jam'] = str_replace("'","",$this->input->post('tran_jam'));
@@ -49,10 +48,11 @@ class Transaksi extends CI_Controller {
 		$data['tran_org'] = str_replace("'","",$this->input->post('tran_org'));
 		$data['tran_hp'] = str_replace("'","",$this->input->post('tran_hp'));
 
-		if ($data['tran_id'] == null) {
+		if ($tran_id == null) {
 			$id_after = $this->Admin_model->save('transaksi',$data);
 			$note = "Penambahan Sukses";
 		}else {
+			$data['tran_id'] = $tran_id;
 			$this->Admin_model->update('transaksi',$data,"tran_id",$data['tran_id']);
 			$id_after = $data['tran_id'];
 			$note = "Perubahan Sukses";

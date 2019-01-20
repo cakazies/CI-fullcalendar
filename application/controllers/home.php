@@ -8,7 +8,6 @@ class Home extends CI_Controller {
 		$this->load->model('Home_model');
 		$this->load->helper(array('form','url','file','download'));
 		error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
-
 	}
 
 	public function index($id_aset,$da_id){
@@ -23,9 +22,7 @@ class Home extends CI_Controller {
 		$data['da_id'] = $da_id;
 		$data['aset'] = $this->Home_model->getasset();
 		$data['transaksi'] = $this->Home_model->getTransaksi($da_id);
-		// print_r ($data['aset']);
 		$data['json'] = json_encode($data['transaksi']);
-		// echo $simpan;
 		$this->load->view('index',$data);
 		$this->load->view('modal');
 	}
@@ -35,10 +32,6 @@ class Home extends CI_Controller {
 		$o = 6;
 		$p = 1;
 		for ($i=7; $i < 25; $i++) {
-			// if ($o == 6) {
-			// 	echo '<div class="modal-body col-md-12">';
-			// 	$p = 1;
-			// }
 			if ($transaksi == null) {
 				$class = 'class="btn btn-primary"';
 			}else {
@@ -61,12 +54,6 @@ class Home extends CI_Controller {
 				echo "<hr/>";
 				$p=0;
 			}
-			// if ($p == 6) {
-			// 	echo '</div>';
-			// 	$o = 6;
-			// }
-			//
-			// $o++;
 			$p++;
 		}
 

@@ -16,14 +16,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function index(){
-		$this->load->view('admin/header',$data);
-		$this->load->view('admin/admin',$data);
-		$this->load->view('admin/footer',$data);
-	}
-	public function form(){
-		$this->load->view('admin/header',$data);
-		$this->load->view('admin/form',$data);
-		$this->load->view('admin/footer',$data);
+		header("location:".base_url()."admin/assets");
 	}
 	public function detail_assets(){
 		$assets_id = $this->input->post('assets_id');
@@ -47,14 +40,14 @@ class Admin extends CI_Controller {
 		$this->delete_status();
 	}
 	public function add_aset(){
-		$data['aset_id'] = str_replace("'","",$this->input->post('aset_id'));
+		$aset_id = str_replace("'","",$this->input->post('aset_id'));
 		$data['aset_nama'] = str_replace("'","",$this->input->post('aset_nama'));
 		$data['aset_alamat'] = str_replace("'","",$this->input->post('aset_alamat'));
 		$data['aset_desa'] = str_replace("'","",$this->input->post('aset_desa'));
 		$data['aset_jenis'] = $this->input->post('jns_id');
 		$data['aset_status'] = '1';
 		$data['aset_user'] = $this->session->userdata('user_id');
-		if ($data['aset_id'] == null) {
+		if ($aset_id == null) {
 			$id_after = $this->Admin_model->save('m_aset',$data);
 			$detail['da_aset'] = $id_after;
 			$detail['da_nama'] = 	$data['aset_nama'];
@@ -62,6 +55,7 @@ class Admin extends CI_Controller {
 			$id_after = $this->Admin_model->save('detail_aset',$detail);
 			$note = "Penambahan Sukses";
 		}else {
+			$data['aset_id'] = $aset_id;
 			$this->Admin_model->update('m_aset',$data,"aset_id",$data['aset_id']);
 			$id_after = $data['aset_id'];
 			$note = "Perubahan Sukses";

@@ -36,15 +36,6 @@
               <img class="img-xs rounded-circle" src="<?php echo base_url(); ?>assets/plugins/admin/images/faces/face1.jpg" alt="Profile image">
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-              <a class="dropdown-item mt-2">
-                Manage Accounts
-              </a>
-              <a class="dropdown-item">
-                Change Password
-              </a>
-              <a class="dropdown-item">
-                Check Inbox
-              </a>
               <a class="dropdown-item">
                 Sign Out
               </a>
