@@ -15,7 +15,7 @@ Restore database data-base.sql in your database
 ```bash
 application/config/config.php
 ```
-setting your config same with your name server
+setting your config same with your server name
 
 
 ### third
@@ -29,7 +29,7 @@ $db['default']['username'] = 'root';
 $db['default']['password'] = '';
 $db['default']['database'] = 'ci-fullcalendar';
 ```
-this is default setting database
+this is database default setting 
 
 ## If you have some question just contact me at:
 - Email: [cakazies@gmail.com](mailto:cakazies@gmail.com)
