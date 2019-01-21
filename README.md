@@ -33,7 +33,7 @@ this is default setting database
 
 ## If you have some question just contact me at:
 - Email: [cakazies@gmail.com](mailto:cakazies@gmail.com)
-- Instagram: @cakazies(https://www.instagram.com/cakazies/)
+- Instagram: [@cakazies](https://www.instagram.com/cakazies/)
 - Github: [cakazies](https://github.com/cakazies)
 
 ## License
